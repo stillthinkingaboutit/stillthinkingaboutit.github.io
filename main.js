@@ -1,7 +1,7 @@
 setInterval(signuptest,10);
 function signuptest(){
   var form = document.getElementById("signup");
-  form.action = encodeURI("https://websiteSignUp--pixlperfect01.repl.co?username="+document.getElementById("usernameSignUp").value+"&password="+document.getElementById("passwordSignUp").value+"&email="+document.getElementById("email").value);
+  form.action = encodeURI("https://test--pixlperfect01.repl.co?username="+document.getElementById("usernameSignUp").value+"&password="+document.getElementById("passwordSignUp").value+"&email="+document.getElementById("email").value);
 }
 function verify(){
   var a = document.getElementById("usernameSignUp").value;
