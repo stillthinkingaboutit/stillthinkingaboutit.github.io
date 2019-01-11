@@ -6,7 +6,7 @@ function signuptest(){
 function verify(){
   var a = document.getElementById("usernameSignUp").value;
   var b = document.getElementById("passwordSignUp").value;
-  var c = document.getElementById("confirmPasswordSignUp").value;
+  var c = document.getElementById("confirmPassword").value;
   var d = document.getElementById("email").value;
   var e = document.getElementById("signup");
   if(a.length>=8){
