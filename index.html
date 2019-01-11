@@ -14,6 +14,20 @@
       <input id="confirmPassword" name="confirmPasswordSignUp" type="password"><br>
       <input id="email" name="emailSignUp" type="email"><br>
       <button id="submit" onclick="verify()">Sign Up</button>
+      <div id="errs">
+        <div id="invalidemail">
+          Invalid Email
+        </div>
+        <div id="passwordmatch">
+          Passwords do not match
+        </div>
+        <div id="passwordlength">
+          Your password is not long enough
+        </div>
+        <div id="usernamelength">
+          Your username is not long enough
+        </div>
+      </div>
     </form>
     <br>
     <p>Already have an account?</p>
