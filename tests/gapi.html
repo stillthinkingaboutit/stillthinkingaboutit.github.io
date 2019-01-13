@@ -1,13 +1,17 @@
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 <!--secret:SPo0uZNNElKAtHhUrQJgdBNs-->
 <meta name="google-signin-client_id" content="25551594256-9hknrqkinc8hota8s3chu17ak2misvh7.apps.googleusercontent.com">
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
   <script>
-    if(GoogleAuth.isSignedIn()){
-      var profile
-    if (GoogleAuth.isSignedIn()) {
-      var profile = GoogleAuth.currentUser.getBasicProfile();
+    function init() {
+      gapi.load('auth2', function() { // Ready. });
+    }
+    gapi.auth2.init({
+      client_id: 'CLIENT_ID.apps.googleusercontent.com'
+    });
+    if (auth2.isSignedIn.get()) {
+      var profile = auth2.currentUser.get().getBasicProfile();
       console.log('ID: ' + profile.getId());
       console.log('Full Name: ' + profile.getName());
       console.log('Given Name: ' + profile.getGivenName());
