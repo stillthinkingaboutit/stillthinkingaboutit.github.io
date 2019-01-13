@@ -1,1 +1,31 @@
-<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script><!--secret:SPo0uZNNElKAtHhUrQJgdBNs--><meta name="google-signin-client_id" content="25551594256-9hknrqkinc8hota8s3chu17ak2misvh7.apps.googleusercontent.com"><body><div class="g-signin2" data-onsuccess="onSignIn"></div><script>function init(){gapi.load('auth2',function(){});gapi.auth2.init({client_id:'25551594256-9hknrqkinc8hota8s3chu17ak2misvh7.apps.googleusercontent.com'});}if(auth2.isSignedIn.get()){var profile=auth2.currentUser.get().getBasicProfile();console.log('ID: '+profile.getId());console.log('Full Name: '+profile.getName());console.log('Given Name: '+profile.getGivenName());console.log('Family Name: '+profile.getFamilyName());console.log('Image URL: '+profile.getImageUrl());console.log('Email: '+profile.getEmail());}function onSignIn(googleUser){var profile=googleUser.getBasicProfile();console.log('ID: '+profile.getId());console.log('Name: '+profile.getName());console.log('Image URL: '+profile.getImageUrl());console.log('Email: '+profile.getEmail());}</script></body>
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+<!--secret:SPo0uZNNElKAtHhUrQJgdBNs-->
+<meta name="google-signin-client_id" content="25551594256-9hknrqkinc8hota8s3chu17ak2misvh7.apps.googleusercontent.com">
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <script>
+        function init() {
+            gapi.load('auth2', function() {});
+        }
+        gapi.auth2.init({
+            client_id: '25551594256-9hknrqkinc8hota8s3chu17ak2misvh7.apps.googleusercontent.com'
+        });
+      setTimeout(function(){
+        if (auth2.isSignedIn.get()) {
+            var profile = auth2.currentUser.get().getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        }},500);
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        }
+    </script>
+</body>
