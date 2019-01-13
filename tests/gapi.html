@@ -7,9 +7,10 @@
         function init() {
             gapi.load('auth2', function() {});
         }
-        gapi.auth2.init({
+        
+        setTimeout(function(){gapi.auth2.init({
             client_id: '25551594256-9hknrqkinc8hota8s3chu17ak2misvh7.apps.googleusercontent.com'
-        });
+        })},300);
       setTimeout(function(){
         if (auth2.isSignedIn.get()) {
             var profile = auth2.currentUser.get().getBasicProfile();
