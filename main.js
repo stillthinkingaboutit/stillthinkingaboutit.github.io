@@ -12,6 +12,9 @@ function verify(){
   var c = document.getElementById("confirmPassword").value;
   var d = document.getElementById("email").value;
   var e = document.getElementById("signup");
+  for(var i=0;i<4;i++){
+    t.children[i].hidden=true;
+  }
   if(a.length>=8){
     if(b.length>=10&&c.length>=10){
       if(b===c){
